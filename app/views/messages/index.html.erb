@@ -2,7 +2,6 @@
   <div class="panel-heading">
     メッセージ一覧
   </div>
-    
   <div class="panel-body">
     <% @messages.each do |message| %>
       <span class="label label-info"><%= message.name %></span>
@@ -13,12 +12,14 @@
 </div>
 
 <%= form_for(@message) do |f| %>
-  名前:
-  <!--<%= simple_format(f.text_area :name, size: "40x1") %>-->
-  <%= f.text_area :name, size: "40x1" %>
-  内容:
-  <!--<%= simple_format(f.text_area :body, size: "40x5") %>-->
-  <%= f.text_area :body, size: "40x5" %>
+  名前
+  <br>
+  <%= f.text_area :name, size: "100x1" %>
+  <br>
+  内容
+  <br>
+  <%= f.text_area :body, size: "100x5" %>
+  <br>
   <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
 
