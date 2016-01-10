@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--<title>MessageBoard</title>-->
+  <title>MessageBoard</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+ <style>
+      footer {
+        border-top: 1px solid#e7e7e7;
+        background-color: #f8f8f8;
+        text-align: center;
+      }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -25,5 +32,8 @@
     
     <%= yield %>
   </div>
+    <footer>
+      <p>&copy; 2015 G &amp; H Inc.</p>
+    </footer>
 </body>
 </html>
